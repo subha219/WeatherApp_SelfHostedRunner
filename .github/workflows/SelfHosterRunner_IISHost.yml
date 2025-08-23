@@ -35,11 +35,11 @@ jobs:
         run: dotnet publish -c Release -o ./publish
 
       # 6. Stop IIS App Pool
-      - name: Stop IIS AppPool
-        shell: powershell
-        run: |
-          Import-Module WebAdministration
-          Stop-WebAppPool -Name "MyApiAppPool" -ErrorAction SilentlyContinue
+      #- name: Stop IIS AppPool
+        #shell: powershell
+        #run: |
+         # Import-Module WebAdministration
+         # Stop-WebAppPool -Name "MyApiAppPool" -ErrorAction SilentlyContinue
 
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
