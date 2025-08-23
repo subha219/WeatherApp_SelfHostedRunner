@@ -19,8 +19,8 @@ jobs:
          # dotnet-version: '8.0.x'  # change to your version
 
       # 3. Restore dependencies
-      - name: Restore dependencies
-        run: dotnet restore
+      #- name: Restore dependencies
+       # run: dotnet restore
 
       # 4. Build project
       - name: Build
