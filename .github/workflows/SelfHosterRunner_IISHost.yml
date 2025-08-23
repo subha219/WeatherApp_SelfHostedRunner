@@ -28,15 +28,16 @@ jobs:
         shell: cmd
         run: dotnet publish -c Release -o ./publish
 
+      - name: Stop IIS before deploy
+        shell: powershell
+        run: |
+          & "$env:windir\system32\inetsrv\appcmd.exe" stop site /site.name:"myapi"
+          & "$env:windir\system32\inetsrv\appcmd.exe" stop apppool /apppool.name:"MyApiAppPool"
+
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
         run: |          
           $deployPath = "E:\myapi"
-          if (Test-Path $deployPath) {
-            Remove-Item -Recurse -Force "$deployPath\*"
-          } else {
-            New-Item -Path $deployPath -ItemType Directory
-          }
+          Remove-Item -Recurse -Force "$deployPath\*"
           Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
         shell: powershell
-        
