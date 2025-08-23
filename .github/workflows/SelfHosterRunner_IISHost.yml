@@ -1,1 +1,59 @@
+name: Deploy to Local IIS
 
+on:
+  push:
+    branches:
+      - main   # change branch if needed
+
+jobs:
+  build-deploy:
+    runs-on: self-hosted   # Your GitHub self-hosted runner (Windows)
+
+    steps:
+      # 1. Checkout source code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup .NET Core SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'  # change to your version
+
+      # 3. Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # 4. Build project
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # 5. Publish project
+      - name: Publish
+        run: dotnet publish -c Release -o ./publish
+
+      # 6. Stop IIS App Pool
+      - name: Stop IIS AppPool
+        run: |
+          Import-Module WebAdministration
+          Stop-WebAppPool -Name "MyApiAppPool" || echo "AppPool not running"
+        shell: powershell
+
+      # 7. Deploy files to IIS folder
+      - name: Deploy to IIS
+        run: |
+          $deployPath = "C:\inetpub\wwwroot\myapi"
+          if (Test-Path $deployPath) {
+            Remove-Item -Recurse -Force "$deployPath\*"
+          } else {
+            New-Item -Path $deployPath -ItemType Directory
+          }
+          Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
+        shell: powershell
+
+      # 8. Start IIS App Pool
+      - name: Start IIS AppPool
+        run: |
+          Import-Module WebAdministration
+          Start-WebAppPool -Name "MyApiAppPool"
+        shell: powershell
