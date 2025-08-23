@@ -36,10 +36,10 @@ jobs:
 
       # 6. Stop IIS App Pool
       - name: Stop IIS AppPool
+        shell: cmd
         run: |
           Import-Module WebAdministration
           Stop-WebAppPool -Name "MyApiAppPool" || echo "AppPool not running"
-        shell: powershell
 
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
@@ -51,11 +51,11 @@ jobs:
             New-Item -Path $deployPath -ItemType Directory
           }
           Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
-        shell: powershell
+        shell: cmd
 
       # 8. Start IIS App Pool
       - name: Start IIS AppPool
         run: |
           Import-Module WebAdministration
           Start-WebAppPool -Name "MyApiAppPool"
-        shell: powershell
+        shell: cmd
