@@ -2,7 +2,7 @@ name: Deploy to Local IIS
 on:
   push:
     branches:
-      - main   # change branch if needed
+      - main
 jobs:
   build-deploy:
     runs-on: self-hosted   # Your GitHub self-hosted runner (Windows)
