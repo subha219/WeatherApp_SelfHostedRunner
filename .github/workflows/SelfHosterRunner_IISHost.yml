@@ -31,6 +31,7 @@ jobs:
 
       # 5. Publish project
       - name: Publish
+        shell: cmd
         run: dotnet publish -c Release -o ./publish
 
       # 6. Stop IIS App Pool
