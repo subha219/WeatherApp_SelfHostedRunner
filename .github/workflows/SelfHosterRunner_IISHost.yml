@@ -39,3 +39,4 @@ jobs:
           }
           Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
         shell: powershell
+        
