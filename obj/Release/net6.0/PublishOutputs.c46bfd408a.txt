@@ -1,0 +1,11 @@
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\WeatherAPI.exe
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\WeatherAPI.dll
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\WeatherAPI.deps.json
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\WeatherAPI.runtimeconfig.json
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\WeatherAPI.pdb
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\StudyMaterial\SSIS\package\WeatherAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
