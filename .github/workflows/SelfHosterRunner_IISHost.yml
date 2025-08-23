@@ -36,10 +36,10 @@ jobs:
 
       # 6. Stop IIS App Pool
       - name: Stop IIS AppPool
-        shell: cmd
+        shell: powershell
         run: |
           Import-Module WebAdministration
-          Stop-WebAppPool -Name "MyApiAppPool" || echo "AppPool not running"
+          Stop-WebAppPool -Name "MyApiAppPool" -ErrorAction SilentlyContinue
 
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
