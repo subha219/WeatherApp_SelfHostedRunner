@@ -44,7 +44,7 @@ jobs:
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
         run: |
-          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           $deployPath = "C:\inetpub\wwwroot\myapi"
           if (Test-Path $deployPath) {
             Remove-Item -Recurse -Force "$deployPath\*"
