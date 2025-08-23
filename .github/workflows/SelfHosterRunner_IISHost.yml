@@ -44,7 +44,7 @@ jobs:
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
         run: |          
-          $deployPath = "C:\inetpub\wwwroot\myapi"
+          $deployPath = "E:\myapi"
           if (Test-Path $deployPath) {
             Remove-Item -Recurse -Force "$deployPath\*"
           } else {
