@@ -22,6 +22,10 @@ jobs:
       #- name: Restore dependencies
        # run: dotnet restore
 
+      - name: Set PowerShell Execution Policy
+        shell: powershell
+        run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
       # 4. Build project
       - name: Build
         run: dotnet build --configuration Release --no-restore
