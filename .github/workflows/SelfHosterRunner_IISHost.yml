@@ -51,7 +51,7 @@ jobs:
             New-Item -Path $deployPath -ItemType Directory
           }
           Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
-        shell: cmd
+        shell: powershell
 
       # 8. Start IIS App Pool
       - name: Start IIS AppPool
