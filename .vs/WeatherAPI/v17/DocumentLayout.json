@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|e:\\studymaterial\\ssis\\package\\weatherapi\\weatherapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|solutionrelative:weatherapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,17 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeatherAPI",
-              "DocumentMoniker": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\WeatherAPI.csproj",
-              "RelativeDocumentMoniker": "WeatherAPI.csproj",
-              "ToolTip": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\WeatherAPI.csproj",
-              "RelativeToolTip": "WeatherAPI.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-23T13:48:54.666Z"
             }
           ]
         }

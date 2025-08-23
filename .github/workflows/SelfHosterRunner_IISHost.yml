@@ -12,12 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Setup .NET Core SDK
-      #- name: Setup .NET
-       # uses: actions/setup-dotnet@v4
-       # with:
-         # dotnet-version: '8.0.x'  # change to your version
-
       # 3. Restore dependencies
       - name: Restore dependencies
         shell: cmd
@@ -34,13 +28,6 @@ jobs:
         shell: cmd
         run: dotnet publish -c Release -o ./publish
 
-      # 6. Stop IIS App Pool
-      #- name: Stop IIS AppPool
-        #shell: powershell
-        #run: |
-         # Import-Module WebAdministration
-         # Stop-WebAppPool -Name "MyApiAppPool" -ErrorAction SilentlyContinue
-
       # 7. Deploy files to IIS folder
       - name: Deploy to IIS
         run: |          
@@ -52,10 +39,3 @@ jobs:
           }
           Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
         shell: powershell
-
-      # 8. Start IIS App Pool
-      - name: Start IIS AppPool
-        run: |
-          Import-Module WebAdministration
-          Start-WebAppPool -Name "MyApiAppPool"
-        shell: cmd
