@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v4
 
       # 2. Setup .NET Core SDK
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'  # change to your version
+      #- name: Setup .NET
+       # uses: actions/setup-dotnet@v4
+       # with:
+         # dotnet-version: '8.0.x'  # change to your version
 
       # 3. Restore dependencies
       - name: Restore dependencies
