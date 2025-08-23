@@ -26,6 +26,7 @@ jobs:
 
       # 4. Build project
       - name: Build
+        shell: cmd
         run: dotnet build --configuration Release --no-restore
 
       # 5. Publish project
