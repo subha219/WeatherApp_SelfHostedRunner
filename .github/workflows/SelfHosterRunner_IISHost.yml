@@ -1,39 +1,35 @@
-name: Deploy to Local IIS
+name: Deploy .NET 6 API to IIS (Self-Hosted)
+
 on:
   push:
     branches:
-      - main
+      - main   # deploy only from main branch
+
 jobs:
-  build-deploy:
-    runs-on: self-hosted   # Your GitHub self-hosted runner (Windows)
+  build-and-deploy:
+    runs-on: self-hosted  # local Windows runner
 
     steps:
-      # 1. Checkout source code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 3. Restore dependencies
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
       - name: Restore dependencies
-        shell: cmd
-        run: dotnet restore WeatherAPI.csproj
+        run: dotnet restore ./WeatherAPI.sln
 
-
-      # 4. Build project
       - name: Build
-        shell: cmd
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build ./WeatherAPI.sln --configuration Release --no-restore
 
-      # 5. Publish project
       - name: Publish
-        shell: cmd
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish ./WeatherAPI.csproj -c Release -o ./publish
 
-
-      # 7. Deploy files to IIS folder
-      - name: Deploy to IIS
-        run: |          
-          $deployPath = "E:\myapi"
-          Remove-Item -Recurse -Force "$deployPath\*"
-          Copy-Item -Path "./publish/*" -Destination $deployPath -Recurse
-        shell: powershell
-        
+      - name: Deploy to IIS folder
+        run: |
+          echo "Deploying to IIS folder..."
+          if exist "C:\inetpub\myapi" rmdir /s /q "C:\inetpub\myapi"
+          mkdir "C:\inetpub\myapi"
+          xcopy /E /I /Y ".\publish\*" "C:\inetpub\myapi\"
