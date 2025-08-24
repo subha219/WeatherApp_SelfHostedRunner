@@ -30,5 +30,11 @@ namespace WeatherAPI.Controllers
             .ToArray();
         }
 
+        [HttpGet(Name = "GetDatetime")]
+        public string GetDateTime()
+        {
+            return DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss");
+        }
+
     }
 }
