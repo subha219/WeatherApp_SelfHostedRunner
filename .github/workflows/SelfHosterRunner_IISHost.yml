@@ -6,7 +6,7 @@ on:
       - main   # deploy only from main branch
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: self-hosted  # local Windows runner
 
     steps:
@@ -33,8 +33,12 @@ jobs:
           Stop-Website -Name "myapi"    
 
       - name: Introduce Delay
-        run: sleep 10 # Pauses execution for 5 seconds     
+        run: sleep 10 # Pauses execution for 10 seconds     
 
+  deploy:
+    runs-on: self-hosted  # local Windows runner
+
+    steps:      
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
