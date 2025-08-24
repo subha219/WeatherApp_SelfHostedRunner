@@ -26,16 +26,25 @@ jobs:
         run: |
           Import-Module WebAdministration
           Stop-WebAppPool -Name "MyApiAppPool"
+      
+      - name: Introduce Delay
+        run: sleep 10 # Pauses execution for 5 seconds    
 
       - name: Stop IIS Website
         run: |
           Import-Module WebAdministration
           Stop-Website -Name "myapi"    
 
+      - name: Introduce Delay
+        run: sleep 10 # Pauses execution for 5 seconds     
+
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
           xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y
+
+      - name: Introduce Delay
+        run: sleep 10 # Pauses execution for 5 seconds     
 
       - name: Start IIS POOL
         run: |
