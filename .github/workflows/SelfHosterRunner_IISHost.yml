@@ -26,3 +26,4 @@ jobs:
         run: |
           echo "Deploying to IIS folder..."
           xcopy /E /I /Y ".\publish\*" "C:\inetpub\myapi\"
+          
