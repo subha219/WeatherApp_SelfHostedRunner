@@ -36,6 +36,7 @@ jobs:
         run: sleep 10 # Pauses execution for 10 seconds     
 
   deploy:
+    needs: build
     runs-on: self-hosted  # local Windows runner
 
     steps:      
