@@ -18,10 +18,18 @@ jobs:
 
       - name: Build
         run: dotnet build ./WeatherAPI.sln --configuration Release --no-restore
-
+  
+  publish:
+    needs: build
+    runs-on: self-hosted  # local Windows runner    
+    steps:
       - name: Publish
         run: dotnet publish ./WeatherAPI.csproj -c Release -o ./publish --runtime win-x64 --self-contained false
-        
+  
+  IIS_Stop:
+    needs: publish
+    runs-on: self-hosted  # local Windows runner    
+    steps:      
       - name: Stop IIS POOL
         run: |
           Import-Module WebAdministration
@@ -37,7 +45,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: self-hosted  # local Windows runner
+    runs-on: self-hosted
 
     steps:      
       - name: Deploy to IIS folder
@@ -45,6 +53,10 @@ jobs:
           echo "Deploying to IIS folder..."
           xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y 
 
+  IIS_Start:
+    needs: deploy
+    runs-on: self-hosted
+    steps:         
       - name: Start IIS POOL
         run: |
           Import-Module WebAdministration
