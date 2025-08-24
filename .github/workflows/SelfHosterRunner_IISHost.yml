@@ -35,5 +35,5 @@ jobs:
       - name: Start IIS site
         run: |
           Import-Module WebAdministration
-          Start-WebAppPool -Name "MyApiAppPool"
+          Start-WebAppPool -Name "MyApiAppPool" 
 
