@@ -22,18 +22,28 @@ jobs:
       - name: Publish
         run: dotnet publish ./WeatherAPI.csproj -c Release -o ./publish --runtime win-x64 --self-contained false
         
-      - name: Stop IIS site
+      - name: Stop IIS POOL
         run: |
           Import-Module WebAdministration
           Stop-WebAppPool -Name "MyApiAppPool"
+
+      - name: Stop IIS Website
+        run: |
+          Import-Module WebAdministration
+          Stop-Website -Name "myapi"    
 
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
           xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y
 
-      - name: Start IIS site
+      - name: Start IIS POOL
         run: |
           Import-Module WebAdministration
           Start-WebAppPool -Name "MyApiAppPool" 
+
+      - name: Start IIS Website
+        run: |
+         Import-Module WebAdministration
+         Start-Website -Name "myapi"    
 
