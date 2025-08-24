@@ -44,7 +44,7 @@ jobs:
         run: sleep 10 # Pauses execution for 10 seconds     
 
   deploy:
-    needs: build
+    needs: IIS_Stop
     runs-on: self-hosted
 
     steps:      
