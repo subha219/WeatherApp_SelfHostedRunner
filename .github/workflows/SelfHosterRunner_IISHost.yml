@@ -25,6 +25,4 @@ jobs:
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
-          if exist "C:\inetpub\myapi" rmdir /s /q "C:\inetpub\myapi"
-          mkdir "C:\inetpub\myapi"
           xcopy /E /I /Y ".\publish\*" "C:\inetpub\myapi\"
