@@ -41,10 +41,7 @@ jobs:
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
-          xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y
-
-      - name: Introduce Delay
-        run: sleep 10 # Pauses execution for 5 seconds     
+          xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y 
 
       - name: Start IIS POOL
         run: |
