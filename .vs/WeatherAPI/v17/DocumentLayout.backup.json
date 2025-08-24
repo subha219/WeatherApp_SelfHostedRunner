@@ -3,16 +3,7 @@
   "WorkspaceRootPath": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|e:\\studymaterial\\ssis\\package\\weatherapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|e:\\studymaterial\\ssis\\package\\weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|e:\\studymaterial\\ssis\\package\\weatherapi\\controllers\\datetimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{653BF6DE-1773-432D-91F9-593B150686AF}|WeatherAPI.csproj|solutionrelative:controllers\\datetimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC943E14-3A30-4607-86EA-7D6C8E91BD88}|..\\TestCalculatorService\\TestCalculatorService.csproj|e:\\studymaterial\\ssis\\package\\testcalculatorservice\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +13,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,41 +33,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DatetimeController.cs",
-              "DocumentMoniker": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Controllers\\DatetimeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DatetimeController.cs",
-              "ToolTip": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Controllers\\DatetimeController.cs",
-              "RelativeToolTip": "Controllers\\DatetimeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T10:21:51.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T10:18:54.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "E:\\StudyMaterial\\SSIS\\package\\WeatherAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "E:\\StudyMaterial\\SSIS\\package\\TestCalculatorService\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestCalculatorService\\UnitTest1.cs",
+              "ToolTip": "E:\\StudyMaterial\\SSIS\\package\\TestCalculatorService\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestCalculatorService\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T09:57:09.764Z",
+              "WhenOpened": "2025-08-24T14:46:11.821Z",
               "EditorCaption": ""
             }
           ]

@@ -1,3 +1,6 @@
+using WeatherAPI.Interface;
+using WeatherAPI.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+builder.Services.AddSingleton<ICalculatorService,CalculatorService>();
 
 var app = builder.Build();
 
