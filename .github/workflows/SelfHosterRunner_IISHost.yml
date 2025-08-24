@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to IIS folder
         run: |
           echo "Deploying to IIS folder..."
-          robocopy ".\publish" "C:\inetpub\myapi\" /MIR /R:2 /W:5
+          xcopy ".\publish\*" "C:\inetpub\myapi\" /E /I /Y
 
       - name: Start IIS site
         run: |
