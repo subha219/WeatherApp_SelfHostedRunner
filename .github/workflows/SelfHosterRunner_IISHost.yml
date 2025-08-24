@@ -25,10 +25,7 @@ jobs:
       - name: Stop IIS POOL
         run: |
           Import-Module WebAdministration
-          Stop-WebAppPool -Name "MyApiAppPool"
-      
-      - name: Introduce Delay
-        run: sleep 10 # Pauses execution for 5 seconds    
+          Stop-WebAppPool -Name "MyApiAppPool"  
 
       - name: Stop IIS Website
         run: |
